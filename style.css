@@ -1,10 +1,64 @@
 :root {
-    /* Paleta de colores */
-    --color-oscuro: #160D18;   /* Fondo general */
-    --color-primario: #09456C; /* Navegación, encabezados */
-    --color-secundario: #23145B; /* Detalles, botones secundarios */
-    --color-destacado: #026F6E; /* Botones, títulos destacados */
-    --color-claro: #1CA39E;  /* Footer, fondo alternativo */
-  
-    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
+  /* Paleta de colores */
+  --color-oscuro: #160d18; /* Fondo general */
+  --color-primario: #09456c; /* Navegación, encabezados */
+  --color-secundario: #23145b; /* Detalles, botones secundarios */
+  --color-destacado: #026f6e; /* Botones, títulos destacados */
+  --color-claro: #1ca39e; /* Footer, fondo alternativo */
+
+  --fuente-principal: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--color-oscuro);
+  font-family: var(--fuente-principal);
+}
+
+#carouselExampleCaptions {
+  /* max-width: 900px; */
+  margin: 32px;
+}
+.carousel-item img {
+  object-fit: cover;
+  height: 500px;
+}
+
+
+/* seccion de ventajas */
+#ventajas .ventaja-card {
+  background-color: var(--color-claro);
+  border-radius: .75rem;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.05);
+  transition: transform .3s, box-shadow .3s;
+}
+
+#ventajas .ventaja-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+#ventajas .ventaja-card i {
+  color: var(--color-bright, #1CA39E);
+}
+
+#ventajas h2{
+  color: var(--color-destacado);
+  font-size: 34px;
+  text-transform: uppercase;
+}
+
+#ventajas h5 {
+  font-weight: 600;
+  color: var(--color-secundario);
+}
+
+#ventajas p {
+  color: var(--color-secundario);
+  font-size: .95rem;
+}
