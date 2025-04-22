@@ -1,0 +1,10 @@
+:root {
+    /* Paleta de colores */
+    --color-oscuro: #160D18;   /* Fondo general */
+    --color-primario: #09456C; /* Navegación, encabezados */
+    --color-secundario: #23145B; /* Detalles, botones secundarios */
+    --color-destacado: #026F6E; /* Botones, títulos destacados */
+    --color-claro: #1CA39E;  /* Footer, fondo alternativo */
+  
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
