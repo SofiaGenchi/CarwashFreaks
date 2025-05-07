@@ -1,0 +1,145 @@
+:root {
+  /* Paleta de colores */
+  --color-oscuro: #160d18; /* Fondo general */
+  --color-primario: #09456c; /* Navegación, encabezados */
+  --color-secundario: #23145b; /* Detalles, botones secundarios */
+  --color-destacado: #026f6e; /* Botones, títulos destacados */
+  --color-claro: #1ca39e; /* Footer, fondo alternativo */
+
+  --fuente-principal: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--color-oscuro);
+  font-family: var(--fuente-principal);
+}
+nav {
+  background: #1ca39e;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+  z-index: 9999; /* Nav por delante del carrusel */
+}
+
+.logo img {
+  height: 60px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #026f6e;
+  font-size: 17px;
+  padding: 8px 14px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  background: #09456c;
+  color: #fff;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Media query para la nav */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    background: #1ca39e;
+    display: none;
+    z-index: 9999; /* Hamburguesa por delante del carrusel */
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    text-align: center;
+    margin: 15px 0;
+  }
+}
+#logo {
+  height: 80px;
+  width: 300px;
+  object-fit: contain;
+  display: block;
+  margin: 20px 0 20px 20px;
+}
+
+#carouselExampleCaptions {
+  /* max-width: 900px; */
+  margin: 32px;
+}
+.carousel-item img {
+  object-fit: cover;
+  height: 500px;
+}
+
+
+/* seccion de ventajas */
+#ventajas .ventaja-card {
+  background-color: var(--color-claro);
+  border-radius: .75rem;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.05);
+  transition: transform .3s, box-shadow .3s;
+}
+
+#ventajas .ventaja-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+#ventajas .ventaja-card i {
+  color: var(--color-bright, #1CA39E);
+}
+
+#ventajas h2{
+  color: var(--color-destacado);
+  font-size: 34px;
+  text-transform: uppercase;
+}
+
+#ventajas h5 {
+  font-weight: 600;
+  color: var(--color-secundario);
+}
+
+#ventajas p {
+  color: var(--color-secundario);
+  font-size: .95rem;
+}
