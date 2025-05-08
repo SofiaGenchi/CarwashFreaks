@@ -19,9 +19,82 @@ body {
   background: var(--color-oscuro);
   font-family: var(--fuente-principal);
 }
+nav {
+  background: #1ca39e;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+  z-index: 9999; /* Nav por delante del carrusel */
+}
 
+.logo img {
+  height: 60px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #026f6e;
+  font-size: 17px;
+  padding: 8px 14px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  background: #09456c;
+  color: #fff;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Media query para la nav */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    background: #1ca39e;
+    display: none;
+    z-index: 9999; /* Hamburguesa por delante del carrusel */
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    text-align: center;
+    margin: 15px 0;
+  }
+}
 #logo {
-  height: 100px;
+  height: 80px;
   width: 300px;
   object-fit: contain;
   display: block;
